@@ -5,13 +5,13 @@
 Devise.setup do |config|
 require "omniauth-google-oauth2"
 
-  config.omniauth :facebook,
-                Rails.application.credentials.facebook[:app_id],
-                Rails.application.credentials.facebook[:app_secret],
-                scope: 'email,user_likes'
+  # config.omniauth :facebook,
+  #               Rails.application.credentials.facebook[:app_id],
+  #               Rails.application.credentials.facebook[:app_secret],
+  #               scope: 'email,user_likes'
 
 
-  config.omniauth :google_oauth2, Rails.application.credentials.google[:client_id], Rails.application.credentials.google[:client_secret], access_type: "online"
+  # config.omniauth :google_oauth2, Rails.application.credentials.google[:client_id], Rails.application.credentials.google[:client_secret], access_type: "online"
 
 
   config.http_authenticatable_on_xhr = false

@@ -20,12 +20,11 @@ class Task < ApplicationRecord
     end
   end
 
-
-  mount_uploader :image, ImageUploader
+  # old uploader for reference
+  #mount_uploader :image, ImageUploader
+  has_one_attached :image
   validates :image, presence: true
   has_many :bids, dependent: :destroy
   has_one :location, dependent: :destroy
-
-
 
 end
